@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poultry Farm - Home</title>
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="slider">
+  <div class="slides fade"><img src="images/slider1.jpeg"></div>
+  <div class="slides fade"><img src="images/slider2.jpeg"></div>
+  <div class="slides fade"><img src="images/slider3.jpeg"></div>
+</section>
+
+<section class="welcome">
+  <h1 class="fade-in">Welcome to Golden Feathers Poultry Farm</h1>
+  <p class="fade-in">We provide high-quality poultry products with professional care and farm management.</p>
+  <a class="btn" href="services.html">Explore Services</a>
+</section>
+</main>
+
+<footer>
+<p>© 2025 Developed by Oketcho Joseph</p>
+</footer>
+
+<script>
+let slideIndex = 0;
+carousel();
+function carousel() {
+  let slides = document.getElementsByClassName("slides");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
+</html>
